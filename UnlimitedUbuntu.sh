@@ -156,15 +156,25 @@ cd
 # finishing
 cd
 chown -R www-data:www-data /home/vps/public_html
-service nginx start
-service openvpn restart
-service cron restart
+service php5-fpm restart
+service nginx restart
 service ssh restart
-service dropbear restart
+sudo service dropbear restart
 service squid3 restart
 /etc/init.d/webmin restart
 rm -rf ~/.bash_history && history -c
 echo "unset HISTFILE" >> /etc/profile
+
+# install neofetch
+echo "deb http://dl.bintray.com/dawidd6/neofetch jessie main" | tee -a /etc/apt/sources.list
+curl "https://bintray.com/user/downloadSubjectPublicKey?username=bintray"| apt-key add -
+apt-get update
+apt-get install neofetch
+
+echo "deb http://dl.bintray.com/dawidd6/neofetch jessie main" | tee -a /etc/apt/sources.list
+curl "https://bintray.com/user/downloadSubjectPublicKey?username=bintray"| apt-key add -
+apt-get update
+apt-get install neofetch
 
 # About
 clear
