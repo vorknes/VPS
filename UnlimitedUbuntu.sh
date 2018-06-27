@@ -32,18 +32,8 @@ sed -i '$ i\echo 1 > /proc/sys/net/ipv6/conf/all/disable_ipv6' /etc/rc.local
 # update
 apt-get update
 
-# Install Pritunl
-echo "deb http://repo.mongodb.org/apt/ubuntu trusty/mongodb-org/3.0 multiverse" > /etc/apt/sources.list.d/mongodb-org-3.0.list
-echo "deb http://repo.pritunl.com/stable/apt trusty main" > /etc/apt/sources.list.d/pritunl.list
-apt-key adv --keyserver hkp://keyserver.ubuntu.com --recv 7F0CEB10
-apt-key adv --keyserver hkp://keyserver.ubuntu.com --recv CF8E292A
-apt-get update
-apt-get -y upgrade
-apt-get -y install pritunl mongodb-org
-service pritunl start
-
 echo "clear" >> .bashrc
-echo 'echo -e "Selamat datang di server $IP" | lolcat' >> .bashrc
+echo 'echo -e "Selamat datang di server $IP" ' >> .bashrc
 echo 'echo -e "Developed/Creator Script By M Fauzan Romandhoni"' >> .bashrc
 echo 'echo -e "Ketik menu untuk menampilkan daftar perintah"' >> .bashrc
 echo 'echo -e ""' >> .bashrc
