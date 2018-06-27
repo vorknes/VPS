@@ -188,11 +188,12 @@ echo "clear" >> .bash_profile
 echo "neofetch" >> .bash_profile
 echo -e "" >> .bash_profile
 echo -e "" >> .bash_profile
-echo -e "----------------------------------------------------" >> .bash_profile
-echo -e "    Selamat datang di server $IP" ' >> .bash_profile
-echo -e "Developed / Creator Script By M Fauzan Romandhoni" >> .bash_profile
-echo -e "  Ketik menu untuk menampilkan daftar perintah" >> .bash_profile
-echo -e "" >> .bash_profile
+echo 'echo -e "      -----------------------------------------------------"' >> .bash_profile
+echo 'echo -e "               Selamat Datang Juragan Ganteng :v"' >> .bash_profile
+echo 'echo -e "        Developed / Creator Script By M Fauzan Romandhoni"' >> .bash_profile
+echo 'echo -e "             Ketik Menu Untuk Fitur Lengkap Ya Boss"' >> .bash_profile
+echo 'echo -e "      -----------------------------------------------------"' >> .bash_profile
+echo 'echo -e "" >> .bash_profile
 
 
 # About
