@@ -29,14 +29,14 @@ ln -fs /usr/share/zoneinfo/Asia/Jakarta /etc/localtime
 echo 1 > /proc/sys/net/ipv6/conf/all/disable_ipv6
 sed -i '$ i\echo 1 > /proc/sys/net/ipv6/conf/all/disable_ipv6' /etc/rc.local
 
+# remove unused
+apt-get -y --purge remove samba*;
+apt-get -y --purge remove apache2*;
+apt-get -y --purge remove sendmail*;
+apt-get -y --purge remove bind9*
+
 # update
 apt-get update
-
-echo "clear" >> .bashrc
-echo 'echo -e "Selamat datang di server $IP" ' >> .bashrc
-echo 'echo -e "Developed/Creator Script By M Fauzan Romandhoni"' >> .bashrc
-echo 'echo -e "Ketik menu untuk menampilkan daftar perintah"' >> .bashrc
-echo 'echo -e ""' >> .bashrc
 
 # set locale
 sed -i 's/AcceptEnv/#AcceptEnv/g' /etc/ssh/sshd_config
@@ -186,7 +186,14 @@ apt-get update
 apt-get install neofetch
 echo "clear" >> .bash_profile
 echo "neofetch" >> .bash_profile
-echo "
+echo -e "" >> .bash_profile
+echo -e "" >> .bash_profile
+echo -e "----------------------------------------------------" >> .bash_profile
+echo -e "    Selamat datang di server $IP" ' >> .bash_profile
+echo -e "Developed / Creator Script By M Fauzan Romandhoni" >> .bash_profile
+echo -e "  Ketik menu untuk menampilkan daftar perintah" >> .bash_profile
+echo -e "" >> .bash_profile
+
 
 # About
 clear
